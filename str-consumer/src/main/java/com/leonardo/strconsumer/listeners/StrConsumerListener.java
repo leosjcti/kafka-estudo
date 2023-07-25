@@ -20,6 +20,7 @@ public class StrConsumerListener {
     @StrConsumerCustomListner(groupId = "group-1") //Anotação criada para evitar retrabalho
     public void create(String message) {
         log.info("CREATE ::: Receive message {}", message);
+        throw new IllegalArgumentException("EXCEPTION...");
     }
 
     @StrConsumerCustomListner(groupId = "group-1")
